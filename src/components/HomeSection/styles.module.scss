@@ -1,0 +1,109 @@
+.homeSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 100%;
+
+  main {
+    position: relative;
+    max-width: 28rem;
+    transform: translateX(-30rem);
+    opacity: 0;
+    animation: 0.5s slide forwards;
+
+    h1 {
+      margin-bottom: 1.2rem;
+    }
+
+    p {
+      margin-bottom: 2.2rem;
+    }
+
+    .socialMedia {
+      position: absolute;
+      top: 2.4rem;
+      left: -4.6rem;
+      transform: rotate(270deg);
+      height: 2.4rem;
+      display: flex;
+      align-items: center;
+
+      a {
+        animation: 0.5s shake forwards;
+        animation-delay: 4s;
+
+        &:first-child {
+          margin-right: 1.2rem;
+        }
+
+        svg {
+          transition: all 0.5s ease;
+
+          &:hover {
+            color: var(--color-primary) !important;
+          }
+        }
+      }
+    }
+  }
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(30rem);
+    opacity: 0;
+    animation: 0.5s slide forwards;
+
+    .profileContainer {
+      width: 27.4rem;
+      height: 27.4rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: linear-gradient(to top, var(--color-primary) 5%, rgba(255, 234, 17, 0)) 95%;
+      
+      .profile {
+        width: 26.2rem;
+        height: 26.2rem;
+        background-image: url("../../../public/assets/images/profile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        border-radius: 50%;
+      }
+    }
+
+    strong {
+      font-family: var(--font-title);
+      margin-top: 1.6rem;
+      font-size: 2.2rem;
+      color: var(--color-white);
+    }
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  } 25% {
+    transform: rotate(10deg);
+  } 50% {
+    transform: rotate(0deg);
+  } 75% {
+    transform: rotate(-10deg);
+  } 100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes slide {
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
