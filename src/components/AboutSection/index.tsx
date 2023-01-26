@@ -30,13 +30,13 @@ const AboutSection = () => {
           <span>
             <FaWhatsappSquare size={32} color="var(--color-primary)" />
 
-            <Link href="https://wa.me/5574999269460">74 9 9926-9460</Link>
+            <Link href="https://wa.me/5574999269460" target="_blank">74 9 9926-9460</Link>
           </span>
 
           <span>
             <FaTelegram size={32} color="var(--color-primary)" />
 
-            <Link href="https://web.telegram.org/k/#@Joanderson2000">74 9 9926-9460</Link>
+            <Link href="https://web.telegram.org/k/#@Joanderson2000" target="_blank">74 9 9926-9460</Link>
           </span>
 
           <span>
