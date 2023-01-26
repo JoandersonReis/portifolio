@@ -4,6 +4,7 @@ import styles from "@/styles/Home.module.scss";
 import Header from "@/components/Header";
 import HomeSection from "@/components/HomeSection";
 import { useState } from "react";
+import ProjectsSection from "@/components/ProjectsSection";
 
 export default function Home() {
   const [sectionSelected, setSectionSelected] = useState("home");
@@ -23,7 +24,8 @@ export default function Home() {
         />
 
         <main className={styles.sections}>
-          <HomeSection />
+          {sectionSelected == "home" && <HomeSection />}
+          {sectionSelected == "projects" && <ProjectsSection />}
         </main>
       </section>
     </div>

@@ -1,0 +1,119 @@
+.projectsSection {
+  display: flex;
+  flex-direction: column;
+  animation: 1s show forwards;
+  opacity: 0;
+
+  span {
+    color: var(--color-primary);
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+    background-color: var(--color-background);
+    display: block;
+  }
+
+  h1 {
+    line-height: 3.2rem;
+    background-color: var(--color-background);
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 4.8rem;
+    row-gap: 2.2rem;
+    margin-top: 4.8rem;
+    margin-bottom: 4.2rem;
+    transform: translateX(-40rem);
+    animation: 0.5s slide forwards;
+
+    .project {
+      max-width: 20rem;
+      height: 20rem;
+      width: 100%;
+      border-radius: 1.8rem;
+      border: 0.2rem solid var(--color-white);
+
+      &:hover {
+        .backgroundOpacity {
+          opacity: 1;
+        }
+      }
+
+      .backgroundOpacity {
+        transition: all 0.3s ease;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("../../../public/assets/images/project-background.svg");
+        background-color: rgba($color: #000000, $alpha: 0.7);
+        border-radius: 1.8rem;
+        opacity: 0;
+
+        a {
+          max-width: 13rem;
+        }
+      }
+    }
+  }
+
+  a {
+    width: 100%;
+    max-width: 26rem;
+    height: 3.6rem;
+    border-radius: 2.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-title);
+    border: 0.2rem solid var(--color-background);
+    position: relative;
+    z-index: 1;
+
+    svg {
+      margin-left: 0.8rem;
+    }
+
+    &::after {
+      content: "";
+      background-color: rgba($color: #fff, $alpha: 0.5);
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      transform: scaleX(0%);
+      transition: all 0.5s ease;
+      border-radius: 2.5rem;
+    }
+
+    &:hover {
+      &::after {
+        transform: scaleX(100%);
+      }
+    }
+  }
+
+  &>a {
+    height: 4.6rem;
+    align-self: center;
+  }
+}
+
+@keyframes slide {
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}

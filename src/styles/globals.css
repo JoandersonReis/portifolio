@@ -23,6 +23,7 @@ button, a {
   background: transparent;
   transition: all 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
 button {
