@@ -1,4 +1,4 @@
-import { FiSun, FiMoon } from "react-icons/fi";
+import { FiSun, FiMoon, FiMenu } from "react-icons/fi";
 
 import styles from "./styles.module.scss";
 
@@ -17,6 +17,10 @@ const Header = (props: Props) => {
       <section>
         <nav>
           <ul>
+            <button className={styles.toggleMenuButton}>
+              <FiMenu size={18} color="var(--color-background)" />
+            </button>
+
             <li>
               <button
                 onClick={() => props.onSectionSelected("home")}

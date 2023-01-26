@@ -1,6 +1,11 @@
 .skillsSection {
   animation: 1s show forwards;
   opacity: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
 
   &>strong {
     color: var(--color-primary);
@@ -53,6 +58,14 @@
           }
         }
       }
+    }
+  }
+}
+
+@media(max-width: 500px) {
+  .skillsSection {
+    main {
+      grid-template-columns: 1fr;
     }
   }
 }

@@ -13,12 +13,15 @@
     border-radius: 2.5rem;
     overflow: hidden;
     background-image: url("../../public/assets/images/background.svg");
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
 
     .sections {
       flex: 1;
       padding: 2.8rem;
+      display: flex;
+      flex-direction: column;
     }
 
     &::before {
@@ -33,6 +36,7 @@
       border-radius: 2.2rem;
 
       background-image: url("../../public/assets/images/background_white_theme.svg");
+      background-repeat: no-repeat;
     }
   }
 
@@ -67,6 +71,29 @@
 
     a {
       color: var(--color-background);
+    }
+  }
+}
+
+@media(max-width: 700px) {
+  .container {
+    height: auto;
+
+    .content {
+      min-height: 100vh;
+      height: auto;
+      border-radius: 0;
+    }
+  }
+
+  .whiteTheme {
+    .content {
+      &::before {
+        width: 120%;
+        height: 120%;
+        top: -2.2rem;
+        right: -2.2rem;
+      }
     }
   }
 }

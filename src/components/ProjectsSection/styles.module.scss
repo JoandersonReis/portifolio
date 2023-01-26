@@ -3,6 +3,9 @@
   flex-direction: column;
   animation: 1s show forwards;
   opacity: 0;
+  width: 100%;
+  flex: 1;
+  justify-content: center;
 
   strong {
     color: var(--color-primary);
@@ -30,8 +33,10 @@
       height: 20rem;
       width: 100%;
       border-radius: 1.8rem;
-      border: 0.2rem solid var(--color-white);
+      border: 0.2rem solid var(--color-gray);
       overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: cover;
 
       &:hover {
         .backgroundOpacity {
@@ -103,6 +108,37 @@
   &>a {
     height: 4.6rem;
     align-self: center;
+  }
+}
+
+@media(max-width: 900px) {
+  .projectsSection {
+    main {
+      column-gap: 0.8rem;
+    }
+  }
+}
+
+@media(max-width: 700px) {
+  .projectsSection {
+    main {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2.2rem;
+
+      .project {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media(max-width: 400px) {
+  .projectsSection {
+    flex: 1;
+
+    main {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
