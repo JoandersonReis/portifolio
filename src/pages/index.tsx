@@ -10,9 +10,10 @@ import AboutSection from "@/components/AboutSection";
 
 export default function Home() {
   const [sectionSelected, setSectionSelected] = useState("home");
+  const [ themeSelected, setThemeSelected ] = useState("dark")
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${themeSelected == "white" && styles.whiteTheme}`}>
       <Head>
         <title>Joanderson - Portifólio</title>
         <meta name="description" content="Desenvolvedor Front-end" />
@@ -23,6 +24,8 @@ export default function Home() {
         <Header
           onSectionSelected={setSectionSelected}
           sectionSelected={sectionSelected}
+          onThemeSelected={setThemeSelected}
+          themeSelected={themeSelected}
         />
 
         <main className={styles.sections}>

@@ -4,12 +4,16 @@ import styles from "./styles.module.scss";
 
 type Props = {
   onSectionSelected: (value: string) => void;
+  onThemeSelected: (value: string) => void;
   sectionSelected: string;
+  themeSelected: string;
 };
 
 const Header = (props: Props) => {
   return (
-    <header className={styles.header}>
+    <header 
+      className={`${styles.header} ${props.themeSelected == "white" && styles.whiteTheme}`}
+    >
       <section>
         <nav>
           <ul>
@@ -59,8 +63,15 @@ const Header = (props: Props) => {
             </li>
           </ul>
 
-          <button className={styles.changeThemeButton}>
-            <FiSun size={16} color="#000" />
+          <button 
+            className={styles.changeThemeButton}
+            onClick={() => props.onThemeSelected(props.themeSelected == "dark"? "white":"dark")}
+          >
+            {props.themeSelected == "dark"?
+              <FiSun size={16} color="#000" />
+              :
+              <FiMoon size={16} color="#000" />
+            }
           </button>
         </nav>
       </section>

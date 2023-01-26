@@ -19,7 +19,13 @@
   outline: 0;
 }
 
-button, a {
+body,
+html {
+  background-color: #ddd;
+}
+
+button,
+a {
   background: transparent;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -33,13 +39,22 @@ button {
   font-family: var(--font-title);
 }
 
-p, span, strong, a, input, textarea, label, li {
+p,
+span,
+strong,
+a,
+input,
+textarea,
+label,
+li {
   font-size: 1.8rem;
   font-family: var(--font-text);
   color: var(--color-gray);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-size: 3.2rem;
   font-family: var(--font-title);
   color: var(--color-white);
@@ -55,5 +70,3 @@ section {
     font-size: 62.5%;
   }
 }
-
-

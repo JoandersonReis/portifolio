@@ -7,7 +7,7 @@ import whatsappIcon from "../../../public/assets/icons/yellow_whatsapp.svg"
 import telegramIcon from "../../../public/assets/icons/yellow_telegram.svg"
 import gmailIcon from "../../../public/assets/icons/yellow_gmail.svg"
 import Link from 'next/link'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaEnvelope, FaEnvelopeSquare, FaGithub, FaLinkedin, FaMailBulk, FaTelegram, FaWhatsapp, FaWhatsappSquare } from 'react-icons/fa'
 
 const AboutSection = () => {
   return (
@@ -28,28 +28,19 @@ const AboutSection = () => {
 
         <div className={styles.contacts}>
           <span>
-            <Image 
-              src={whatsappIcon}
-              alt="Icone de Whatsapp"
-            />
+            <FaWhatsappSquare size={32} color="var(--color-primary)" />
 
             <Link href="https://wa.me/5574999269460">74 9 9926-9460</Link>
           </span>
 
           <span>
-            <Image 
-              src={telegramIcon}
-              alt="Icone de Telegram"
-            />
+            <FaTelegram size={32} color="var(--color-primary)" />
 
             <Link href="https://web.telegram.org/k/#@Joanderson2000">74 9 9926-9460</Link>
           </span>
 
           <span>
-            <Image 
-              src={gmailIcon}
-              alt="Icone de Gmail"
-            />
+          <FaEnvelopeSquare size={32} color="var(--color-primary)" />
 
             <span>joandersonreis470@gmail.com</span>
           </span>

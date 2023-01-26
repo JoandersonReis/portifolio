@@ -5,10 +5,12 @@
   justify-content: center;
 
   .content {
+    position: relative;
+    z-index: 1;
     height: 60rem;
     width: 100%;
     background-color: var(--color-background);
-    border-radius: 2.2rem;
+    border-radius: 2.5rem;
     overflow: hidden;
     background-image: url("../../public/assets/images/background.svg");
     display: flex;
@@ -17,6 +19,54 @@
     .sections {
       flex: 1;
       padding: 2.8rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1.8rem;
+      right: 1.8rem;
+      background-color: var(--color-white);
+      height: 0%;
+      width: 0%;
+      transition: all 0.5s ease;
+      border-radius: 2.2rem;
+
+      background-image: url("../../public/assets/images/background_white_theme.svg");
+    }
+  }
+
+}
+
+.whiteTheme {
+  --color-primary: #50fa7b;
+
+  .content {
+    &::before {
+      height: 100%;
+      width: 100%;
+      top: 0;
+      right: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--color-background) !important;
+      background-color: transparent;
+    }
+
+    strong {
+      background-color: transparent !important;
+    }
+
+    p,
+    span {
+      color: #000 !important;
+    }
+
+    a {
+      color: var(--color-background);
     }
   }
 }
