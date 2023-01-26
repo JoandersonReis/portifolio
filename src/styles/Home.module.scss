@@ -4,6 +4,15 @@
   align-items: center;
   justify-content: center;
 
+  strong {
+    text-shadow: 0 0 0.2rem var(--color-background) !important;
+  }
+
+  h1,
+  h2 {
+    text-shadow: 0 0 0.2rem var(--color-background) !important;
+  }
+
   .content {
     position: relative;
     z-index: 1;
@@ -62,6 +71,12 @@
 
     strong {
       background-color: transparent !important;
+      text-shadow: 0 0 0.2rem var(--color-white) !important;
+    }
+
+    h2,
+    h1 {
+      text-shadow: 0 0 0.2rem var(--color-white) !important;
     }
 
     p,

@@ -166,6 +166,18 @@
       }
     }
   }
+
+  .whiteTheme {
+    section {
+      nav {
+        .changeThemeButton {
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media(max-width: 450px) {
