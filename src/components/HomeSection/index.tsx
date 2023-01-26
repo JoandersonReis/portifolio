@@ -4,9 +4,11 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Button from "../Button";
 import styles from "./styles.module.scss";
 
-type Props = {};
+type Props = {
+  onChangeSection: (value: string) => void
+};
 
-const HomeSection = () => {
+const HomeSection = (props: Props) => {
   return (
     <section className={styles.homeSection}>
       <main>
@@ -18,6 +20,7 @@ const HomeSection = () => {
         </p>
 
         <Button
+          onClick={() => props.onChangeSection("about")}
           title="Saiba mais"
           icon={<FiChevronRight size={22} color="var(--color-background)" />}
         />

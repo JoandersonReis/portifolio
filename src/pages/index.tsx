@@ -29,7 +29,7 @@ export default function Home() {
         />
 
         <main className={styles.sections}>
-          {sectionSelected == "home" && <HomeSection />}
+          {sectionSelected == "home" && <HomeSection onChangeSection={setSectionSelected} />}
           {sectionSelected == "projects" && <ProjectsSection />}
           {sectionSelected == "skills" && <SkillsSection />}
           {sectionSelected == "about" && <AboutSection />}
