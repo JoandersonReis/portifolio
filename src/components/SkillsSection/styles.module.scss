@@ -1,0 +1,73 @@
+.skillsSection {
+  animation: 1s show forwards;
+  opacity: 0;
+
+  &>strong {
+    color: var(--color-primary);
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+    background-color: var(--color-background);
+    display: block;
+  }
+
+  h1 {
+    line-height: 3.2rem;
+    background-color: var(--color-background);
+  }
+
+  main {
+    margin-top: 3.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 8.2rem;
+    row-gap: 3.2rem;
+    opacity: 0;
+    animation: 0.5s slide forwards;
+    transform: translateX(60rem);
+
+
+    .skillsContainer {
+      strong {
+        font-size: 2.2rem;
+        color: var(--color-primary);
+        font-family: var(--font-title);
+      }
+
+      .skills {
+        .skill {
+          display: flex;
+          align-items: center;
+
+          .skillLevel {
+            width: 1.2rem;
+            height: 1.2rem;
+            background-color: var(--color-primary);
+            border-radius: 0.2rem;
+            margin-left: 0.6rem;
+          }
+
+          .level {
+            width: 0.2rem;
+            height: 0.2rem;
+            border-radius: 50%;
+            margin-left: 0.6rem;
+            background-color: var(--color-gray);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}

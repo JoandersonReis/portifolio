@@ -26,7 +26,7 @@ const ProjectsSection = () => {
 
   return (
     <section className={styles.projectsSection}>
-      <span>Projetos</span>
+      <strong>Projetos</strong>
       <h1>PROJETOS QUE ACHO VÁLIDO DESTACAR</h1>
 
       <main>

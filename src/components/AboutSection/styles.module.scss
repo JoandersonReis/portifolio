@@ -1,0 +1,91 @@
+.aboutSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4.4rem;
+  row-gap: 2.2rem;
+  height: 100%;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: 0.5s slide forwards;
+    opacity: 0;
+    transform: translateX(-40rem);
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: 0.5s slide forwards;
+    opacity: 0;
+    transform: translateX(40rem);
+
+    strong {
+      font-size: 2.2rem;
+      color: var(--color-primary);
+      font-family: var(--font-title);
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      line-height: 3.2rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .contacts {
+      display: flex;
+      flex-direction: column;
+
+      &>span {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.2rem;
+
+        span {
+          margin-left: 0.8rem;
+        }
+
+        a {
+          margin-left: 0.8rem;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 3.2rem;
+      margin-top: 2.2rem;
+    }
+
+    .socialMedia {
+      display: flex;
+      margin-top: 0.8rem;
+
+      a {
+        margin-right: 0.8rem;
+
+        &:hover {
+          svg {
+            transition: all 0.5s ease;
+            color: var(--color-white) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes slide {
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
