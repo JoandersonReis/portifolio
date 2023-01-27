@@ -18,7 +18,7 @@ const AboutSection = () => {
         </p>
 
         <p>
-          Busco me desenvolver profissionalmente e pessoalmente, sou uma pessoa calma, paciênte e muito amigável. Tenho muita vontade de aprender e me destaco principalmente sob pressão.
+          Busco me desenvolver profissionalmente e pessoalmente, sou uma pessoa calma, paciente e muito amigável. Tenho muita vontade de aprender e me destaco principalmente pela flexibilidade a diversas situações.
         </p>
       </main>
 
